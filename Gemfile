@@ -11,6 +11,12 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'haml-rails'
+gem 'bootstrap_form'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
 
 group :development, :test do
   gem 'rspec-rails'
@@ -24,7 +30,8 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', require: false
   gem 'faker'
+  gem 'cucumber-rails', :require => false
 end

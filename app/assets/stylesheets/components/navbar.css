@@ -1,0 +1,17 @@
+.navbar-custom {
+  background-color: #273b47;
+  width: 100%;
+  border-radius: 0px;
+  z-index: 999;
+  padding: 20px 0px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff !important;
+  letter-spacing: 1px;
+  padding-top: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
