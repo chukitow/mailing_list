@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3
+      .mailing-container
+        %h2.text-center
+          Join to the Mailing List!
+
+        = bootstrap_form_for(@mailing) do |f|
+          = f.text_field :name, icon: 'user', hide_label: true, placeholder: 'Full name'
+          = f.text_field :email, icon: 'envelope', hide_label: true, placeholder: 'Email address'
+          = f.submit 'Join', class: 'btn btn-success btn-block'
