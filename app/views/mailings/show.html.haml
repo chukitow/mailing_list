@@ -12,3 +12,11 @@
             .text-center
               %a{href: @linkedin_authorize_url}
                 Connect to LinkedIn
+
+          .col-md-4
+            - unless @mailing.twitter_profile_image_url.nil?
+              = image_tag(@mailing.twitter_profile_image_url, class: 'img-responsive center-block')
+
+            .text-center
+              %a{href: "/auth/twitter?mailing_id=#{@mailing.id}"}
+                Connect to twitter
