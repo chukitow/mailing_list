@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'bootstrap_form'
+gem 'figaro'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
