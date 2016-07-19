@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718050542) do
+ActiveRecord::Schema.define(version: 20160719022447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20160718050542) do
     t.string   "linkedin_id"
     t.integer  "linkedin_connections"
     t.string   "linkedin_pictureUrl"
+    t.string   "twitter_id"
+    t.integer  "twitter_followers"
+    t.integer  "twitter_follows"
+    t.string   "twitter_profile_image_url"
   end
 
 end
