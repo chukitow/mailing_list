@@ -18,5 +18,13 @@
               = image_tag(@mailing.twitter_profile_image_url, class: 'img-responsive center-block')
 
             .text-center
-              %a{href: "/auth/twitter?mailing_id=#{@mailing.id}"}
+              %a{href: "/auth/twitter"}
                 Connect to twitter
+
+          .col-md-4
+            - unless @mailing.facebook_profile_image_url.nil?
+              = image_tag(@mailing.facebook_profile_image_url, class: 'img-responsive center-block')
+
+            .text-center
+              %a{href: "/auth/facebook"}
+                Connect to Facebook
