@@ -4,3 +4,11 @@
       .mailing-container
         %h2.text-center
           Thanks! #{@mailing.name}
+        .row
+          .col-md-4
+            - unless @mailing.linkedin_pictureUrl.nil?
+              = image_tag(@mailing.linkedin_pictureUrl, class: 'img-responsive center-block')
+
+            .text-center
+              %a{href: @linkedin_authorize_url}
+                Connect to LinkedIn

@@ -35,4 +35,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'faker'
   gem 'cucumber-rails', :require => false
+  gem 'webmock'
 end

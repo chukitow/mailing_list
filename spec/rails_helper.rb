@@ -6,6 +6,7 @@ require 'rspec/rails'
 require 'shoulda/matchers'
 require 'factory_girl_rails'
 require 'simplecov'
+require 'webmock/rspec'
 
 SimpleCov.start
 
