@@ -9,4 +9,3 @@ Scenario: Join mailing list
   And I fill in "Email address" with "john@mail.me"
   When I press "Join"
   Then page should have notice message "Thanks! John"
-
