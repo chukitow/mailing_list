@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'bootstrap_form'
 gem 'figaro'
 gem 'selenium-webdriver'
+gem 'omniauth-twitter'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

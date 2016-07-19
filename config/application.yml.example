@@ -2,3 +2,5 @@ linkedin_client_id:
 linkedin_client_secret:
 application_host:
 linkedin_state:
+twitter_consumer_key:
+twitter_consumer_secret:
