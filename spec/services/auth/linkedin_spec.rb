@@ -7,13 +7,13 @@ describe Auth::Linkedin, '.authorize' do
       response_type: 'code',
       client_id: ENV['linkedin_client_id'],
       state: ENV['linkedin_state'],
-      redirect_uri: "#{ENV['application_host']}/auth/linkedin/callback?mailing_id=#{mailing.id}",
+      redirect_uri: "#{ENV['application_host']}/auth/linkedin/callback",
       scope: 'r_emailaddress r_basicprofile'
     }
   end
 
   it 'retrieves authorization url' do
-    url = URI.parse(Auth::Linkedin.authorize(mailing))
+    url = URI.parse(Auth::Linkedin.authorize)
 
     expect(url.host).to eq('www.linkedin.com')
     expect(url.path).to eq('/oauth/v2/authorization')
@@ -41,7 +41,7 @@ describe Auth::Linkedin, '.get_profile_information' do
   end
 
   it 'retrieves profile\'s information' do
-    profile_information = Auth::Linkedin.get_profile_information(mailing, code)
+    profile_information = Auth::Linkedin.get_profile_information(code)
     expect(profile_information).to eq(profile_information_stub)
   end
 end

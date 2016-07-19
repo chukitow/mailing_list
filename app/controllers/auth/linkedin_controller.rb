@@ -1,11 +1,9 @@
-class Auth::LinkedinController < ApplicationController
-  before_action :check_mailing_presence, only: [:callback]
-
+class Auth::LinkedinController < AuthController
   def callback
-    mailing = Mailing.find(params[:mailing_id])
+    mailing = Mailing.find(session[:mailing_id])
 
     if params[:code].present?
-      profile_information = Auth::Linkedin.get_profile_information(mailing, params[:code])
+      profile_information = Auth::Linkedin.get_profile_information(params[:code])
       mailing.update_attributes({
         linkedin_id: profile_information["id"],
         linkedin_connections: profile_information["numConnections"],
@@ -14,10 +12,5 @@ class Auth::LinkedinController < ApplicationController
     end
 
     redirect_to mailing
-  end
-
-  private
-  def check_mailing_presence
-    redirect_to root_url unless params[:mailing_id].present?
   end
 end

@@ -1,7 +1,7 @@
-class Auth::TwitterController < ApplicationController
+class Auth::TwitterController < AuthController
   def callback
     if params[:oauth_token].present? && params[:oauth_verifier].present?
-      mailing = Mailing.find(params[:mailing_id])
+      mailing = Mailing.find(session[:mailing_id])
 
       mailing.update_attributes({
         twitter_id: request.env['omniauth.auth']['extra']['raw_info']['id'],
