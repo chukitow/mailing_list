@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'bootstrap_form'
+gem 'figaro'
+gem 'selenium-webdriver'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -34,4 +36,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'faker'
   gem 'cucumber-rails', :require => false
+  gem 'webmock'
 end
