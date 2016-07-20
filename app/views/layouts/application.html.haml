@@ -13,4 +13,8 @@
           %a.navbar-brand.logo{:href => root_url}
             Mailing List
         #navbar-menu.navbar-collapse.collapse
+          %ul.nav.navbar-nav.navbar-right
+            - unless current_user.nil?
+              %li
+                = link_to 'Log out', destroy_session_path, method: :delete
     = yield

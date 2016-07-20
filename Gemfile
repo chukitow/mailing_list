@@ -18,6 +18,7 @@ gem 'selenium-webdriver'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'koala'
+gem 'bcrypt'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
