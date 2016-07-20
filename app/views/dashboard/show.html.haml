@@ -1,0 +1,28 @@
+.container
+  .row
+    .col-md-12
+      .mailing-section
+        %h2.text-center
+          Mailing info
+
+  .row
+    .col-md-3
+      %h3.text-center
+        Linkedin connections
+        %br
+        = @mailing.linkedin_connections || "Not connected"
+    .col-md-3
+      %h3.text-center
+        Twitter Follows
+        %br
+        = @mailing.twitter_follows || "Not connected"
+    .col-md-3
+      %h3.text-center
+        Twitter Followers
+        %br
+        = @mailing.twitter_followers || "Not connected"
+    .col-md-3
+      %h3.text-center
+        Facebook friends
+        %br
+        = @mailing.facebook_friends || "Not connected"

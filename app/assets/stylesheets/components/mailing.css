@@ -1,12 +1,16 @@
 .mailing-container {
-    margin: 0 auto;
-    border: 2px solid #98ca3f;
-    -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    padding: 65px 20px 40px;
-    position: relative;
-    margin-top: 60px;
-    margin-bottom: 60px;
+  margin: 0 auto;
+  border: 2px solid #98ca3f;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 65px 20px 40px;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.mailing-section {
+  margin-top: 60px;
 }
