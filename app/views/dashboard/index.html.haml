@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-md-12
+      .mailing-section
+        %h2.text-center
+          Mailings
+
+        .table-responsive
+          %table.table.table-striped
+            %thead
+              %tr
+                %th
+                  Name
+                %th
+                  Email
+                %th
+            %tbody
+              - @mailings.each do |mailing|
+                %tr
+                  %td
+                    = mailing.name
+                  %td
+                    = mailing.email
+                  %td
+                    = link_to 'Show info', dashboard_mailing_path(mailing)
