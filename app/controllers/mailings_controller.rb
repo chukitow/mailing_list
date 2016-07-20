@@ -1,7 +1,10 @@
 class MailingsController < ApplicationController
   def show
     @mailing = Mailing.find(params[:id])
-    @linkedin_authorize_url = Auth::Linkedin.authorize(@mailing)
+
+    session[:mailing_id] = @mailing.id
+
+    @linkedin_authorize_url = Auth::Linkedin.authorize
   end
 
   def new

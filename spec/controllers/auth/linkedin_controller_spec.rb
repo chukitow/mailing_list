@@ -17,6 +17,7 @@ describe Auth::LinkedinController, 'GET#callback' do
     before do
       stub_request(:post, "https://www.linkedin.com/oauth/v2/accessToken").to_return(body: access_token_stub)
       stub_request(:get, "https://api.linkedin.com/v1/people/~:(id,num-connections,picture-url)?oauth2_access_token=#{access_token}&format=json").to_return(body: profile_information_stub.to_json)
+      session[:mailing_id] = mailing.id
       get :callback, mailing_id: mailing.id, code: code
     end
 

@@ -16,6 +16,8 @@ gem 'bootstrap_form'
 gem 'figaro'
 gem 'selenium-webdriver'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'koala'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
@@ -35,7 +37,7 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', require: false
-  gem 'faker'
+  gem 'faker', github: 'stympy/faker'
   gem 'cucumber-rails', :require => false
   gem 'webmock'
 end

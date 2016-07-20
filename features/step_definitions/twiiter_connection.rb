@@ -1,3 +1,3 @@
 Then(/^I should be redirected to Twitter authorization page$/) do
-  expect(current_path).to eq('/auth/twitter')
+  expect(URI(current_url).host).to eq('api.twitter.com')
 end

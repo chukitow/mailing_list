@@ -16,6 +16,7 @@ describe Auth::TwitterController, 'GET#callback' do
         }
       }
 
+      session[:mailing_id] = mailing.id
       get :callback, mailing_id: mailing.id, oauth_token: Faker::Lorem.characters, oauth_verifier: Faker::Lorem.characters
     end
 
